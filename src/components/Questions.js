@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 
 const Questions = ({ data }) => {
   const [show, setShow] = useState(false);
@@ -10,12 +11,12 @@ const Questions = ({ data }) => {
   return (
     <>
       <div className="ques-container">
-        <h3 className="title">
+        <h4 className="title">
           {data.title}{" "}
           <button className="btn" onClick={toggleInfo}>
-            {show ? "-" : "+"}
+            {show ? <AiOutlineMinus /> : <AiOutlinePlus />}
           </button>
-        </h3>
+        </h4>
 
         <p>{show ? `${data.info}` : null}</p>
       </div>

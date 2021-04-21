@@ -7,11 +7,13 @@ function App() {
     <>
       <main>
         <div className="heading">
-          <h1>Questions & Answers about Login</h1>
+          <h3>Questions And Answers about Login</h3>
         </div>
-        {data.map((ques) => (
-          <Questions data={ques} />
-        ))}
+        <div className="board">
+          {data.map((ques) => (
+            <Questions key={ques.id} data={ques} />
+          ))}
+        </div>
       </main>
     </>
   );
